@@ -36,3 +36,4 @@ for i in range(1,401):
         
     except FileNotFoundError:
         print("i =", i,"\n 파일이 존재하지 않으므로 건너뜁니다.")
+        
