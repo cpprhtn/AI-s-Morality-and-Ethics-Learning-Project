@@ -42,3 +42,5 @@ for k in df_list:
     frames.append(globals()['df{}'.format(k)])
     
 df0 = pd.concat(frames)
+
+del df0['original_form']
