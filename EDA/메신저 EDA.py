@@ -7,7 +7,7 @@ Created on Sat Sep  5 16:34:14 2020
 """
 
 
-
+frames = []
 df_list = []
 import json
 import pandas as pd
@@ -37,6 +37,8 @@ for i in range(1,401):
     except FileNotFoundError:
         print("i =", i,"\n 파일이 존재하지 않으므로 건너뜁니다.")
         
-for j in df_list:
+
+for k in df_list: 
+    frames.append(globals()['df{}'.format(k)])
     
-print(result)
+df0 = pd.concat(frames)
