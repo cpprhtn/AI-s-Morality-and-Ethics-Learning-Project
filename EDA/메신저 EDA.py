@@ -5,10 +5,10 @@ Created on Sat Sep  5 16:34:14 2020
 
 @author: cpprhtn
 """
-a='1'
-b = 'MDRW190000000{}.json'.format(a)
 
 
+
+df_list = []
 import json
 import pandas as pd
 def read_json(a):
@@ -33,7 +33,7 @@ def read_json(a):
 for i in range(1,401):
     try:
         read_json(i)
-        
+        df_list.append(i)
     except FileNotFoundError:
         print("i =", i,"\n 파일이 존재하지 않으므로 건너뜁니다.")
         
