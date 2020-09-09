@@ -44,3 +44,6 @@ for k in df_list:
 df0 = pd.concat(frames)
 
 del df0['original_form']
+
+
+ df0.to_csv("Messenger.csv")
